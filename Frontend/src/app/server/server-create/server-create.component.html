@@ -1,0 +1,60 @@
+
+<button mat-fab color="primary" (click)="toggleForm()"> + </button>
+<mat-card *ngIf="showForm">
+  <form (submit)="onAddServer(serverForm)" #serverForm="ngForm">
+    <mat-form-field>
+      <mat-label>IP</mat-label>
+      <input
+        matInput
+        type="text"
+        name="serverIP"
+        ngModel
+        required
+        #ip="ngModel"
+      />
+      <mat-error *ngIf="ip.invalid">
+        IP is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title / Alias</mat-label>
+      <input
+        matInput
+        type="text"
+        name="serverTitle"
+        ngModel
+      />
+    </mat-form-field>
+    <mat-checkbox
+      name="serverlogin"
+      ngModel>
+      Additional Login
+    </mat-checkbox>
+    <mat-form-field>
+      <mat-label>Software</mat-label>
+      <select
+        matNativeControl
+        name="serverSoftware"
+        ngModel >
+        <option value="EngineX">Engine X</option>
+        <option value="Apache">Apache</option>
+        <option value="Windows">Windows</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        rows="2"
+        name="serverDescription"
+        ngModel
+      ></textarea>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      type="submit">
+      Save Server
+    </button>
+  </form>
+</mat-card>
+

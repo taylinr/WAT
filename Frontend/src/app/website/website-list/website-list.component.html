@@ -1,0 +1,36 @@
+
+
+<mat-accordion multi="true" *ngIf="websites.length > 0">
+  <h3>Website List:</h3>
+
+  <mat-expansion-panel *ngFor="let website of websites">
+    <mat-expansion-panel-header>
+      <h3>{{website.title}}</h3>
+    </mat-expansion-panel-header>
+    <p *ngIf="website.createDate">
+      <label>Creation Date:</label>
+      {{website.createDate}}
+    </p>
+    <p *ngIf="website.expirationDate">
+      <label>Epiration Date:</label>
+      {{website.expirationDate}}
+    </p>
+    <p *ngIf="website.hostedIntern">
+      <label>Hosted Intern:</label>
+      {{website.hostedIntern}}
+    </p>
+    <div *ngIf="website.domains.length > 0">
+      <label>Domains:</label>
+      <div *ngFor="let domain of website.domains">
+        <p>{{domain}}</p>
+      </div>
+    </div>
+    <p *ngIf="website.description">
+      <label>Description:</label>
+      {{website.description}}
+    </p>
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+<p *ngIf="websites.length <= 0">No websites added yet!</p>

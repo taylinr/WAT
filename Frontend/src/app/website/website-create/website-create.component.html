@@ -1,0 +1,67 @@
+<button mat-fab color="accent" (click)="toggleForm()"> + </button>
+<mat-card *ngIf="showForm">
+  <form (submit)="onAddWebsite(websiteForm)" #websiteForm="ngForm">
+
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        type="text"
+        name="websiteTitle"
+        ngModel
+        required
+        #title="ngModel"
+      />
+      <mat-error *ngIf="title.invalid">
+        Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Domains</mat-label>
+      <input
+        matInput
+        type="text"
+        name="websiteDomains"
+        ngModel
+        required
+        #domains="ngModel"
+      />
+      <mat-error *ngIf="domains.invalid">
+        At least one Domain is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-checkbox
+      name="websiteHostedIntern"
+      ngModel>
+      HostedIntern
+    </mat-checkbox>
+<!--    <mat-form-field>-->
+<!--      <mat-label>Created at: </mat-label>-->
+<!--      <input matInput [matDatepicker]="picker1">-->
+<!--      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>-->
+<!--      <mat-datepicker #picker1></mat-datepicker>-->
+<!--    </mat-form-field>-->
+<!--    <mat-form-field>-->
+<!--      <mat-label>Expiring at: </mat-label>-->
+<!--      <input matInput [matDatepicker]="picker1">-->
+<!--      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>-->
+<!--      <mat-datepicker #picker1></mat-datepicker>-->
+<!--    </mat-form-field>-->
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        rows="2"
+        name="websiteDescription"
+        ngModel
+      ></textarea>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      type="submit"
+    >
+      Save Website
+    </button>
+  </form>
+</mat-card>
+

@@ -1,0 +1,8 @@
+mat-toolbar{
+  margin-bottom: 50px;
+}
+
+mat-toolbar span{
+  width: 1200px;
+  margin: auto;
+}

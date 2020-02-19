@@ -1,0 +1,20 @@
+<h2>Server List:</h2>
+
+<mat-accordion *ngIf="servers.length > 0" >
+  <mat-expansion-panel *ngFor="let server of servers">
+    <mat-expansion-panel-header (click)="onGetWebsites(server._id)">
+      <h3><b>{{server.ip}}</b>
+        {{server.title}}</h3>
+    </mat-expansion-panel-header>
+    <app-website-create></app-website-create>
+    <p *ngIf="server.description">Description: {{server.description}}</p>
+    <p *ngIf="server.login">Additional Login:  {{server.login}}</p>
+    <p *ngIf="server.software">Operating System: {{server.software}}</p>
+    <app-website-list></app-website-list>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<p *ngIf="servers.length <= 0">No servers added yet!</p>
+
+
+
