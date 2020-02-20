@@ -28,7 +28,8 @@ export class WebRequestService {
   }
 
   // (Soft) DELETE
-  delete(uri: string, body: object) {
-    return this.http.delete(`${this.ROOT_URL}/${uri}`, body);
+  delete(uri: string) {
+    console.log('delete URI: ' + uri);
+    return this.http.delete(`${this.ROOT_URL}/${uri}`);
   }
 }

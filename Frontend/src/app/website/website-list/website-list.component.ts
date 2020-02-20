@@ -35,4 +35,19 @@ export class WebsiteListComponent implements OnInit {
       websiteUpdate => { this.websites.push(websiteUpdate); }
     );
   }
+
+  onDelete(id: string) {
+    console.log('onDelete: ' + id);
+    this.websiteService.deleteWebsite(id).subscribe((response: any) => {
+      console.log(response);
+    });
+
+    let isDeleted = false;
+    for (let i = 0; i < this.websites.length && !isDeleted; i++) {
+        if (this.websites[i]._id === id) {
+          this.websites.splice(i, 1);
+          isDeleted = true;
+        }
+    }
+  }
 }

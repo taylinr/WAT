@@ -28,4 +28,17 @@ export class ServerListComponent implements OnInit {
   onGetWebsites(id: string) {
     this.getServerID.getWebsites(id);
   }
+
+  onDelete(id: string) {
+    console.log('onDelete: ' + id);
+    this.serverService.deleteServer(id).subscribe((response: any) => {
+      console.log(response);
+    });
+
+    for (let i = 0; i < this.servers.length; i++) {
+      if (this.servers[i]._id === id) {
+        this.servers.splice(i, 1);
+      }
+    }
+  }
 }

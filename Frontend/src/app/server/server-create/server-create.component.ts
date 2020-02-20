@@ -3,7 +3,6 @@ import {Server} from '../server.model';
 import {NgForm} from '@angular/forms';
 import {ServerService} from 'src/app/services/server/server.service';
 import {ServerInteractionService} from 'src/app/services/interaction/server-interaction.service';
-import {Website} from '../../website/website.model';
 
 @Component({
   selector: 'app-server-create',

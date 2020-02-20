@@ -24,4 +24,9 @@ export class ServerService {
     return server;
   }
 
+  deleteServer(id: string) {
+    console.log('deleteServer: ' + id);
+    return this.webReqService.delete('servers/' + id);
+  }
+
 }

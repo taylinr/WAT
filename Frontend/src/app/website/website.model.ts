@@ -1,6 +1,7 @@
 export class Website {
+  _id?: string;
   title: string;
-  serverID: string;
+  _serverID: string;
   description?: string;
   domains?: [string];
   createDate?: string;
@@ -12,7 +13,7 @@ export class Website {
               expirationDate?: string, hostedIntern?: boolean) {
 
     this.title = title;
-    this.serverID = serverID;
+    this._serverID = serverID;
     if (description !== undefined) {
       this.description = description;
     }

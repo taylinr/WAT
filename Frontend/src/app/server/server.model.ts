@@ -1,4 +1,5 @@
 export class Server {
+  _id?: string;
   ip: string;
   title?: string;
   login?: boolean;

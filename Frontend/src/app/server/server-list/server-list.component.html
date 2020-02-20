@@ -10,7 +10,8 @@
     <p *ngIf="server.description">Description: {{server.description}}</p>
     <p *ngIf="server.login">Additional Login:  {{server.login}}</p>
     <p *ngIf="server.software">Operating System: {{server.software}}</p>
-    <app-website-list></app-website-list>
+    <app-website-list ></app-website-list>
+    <button mat-button color="warn" (click)="onDelete(server._id)">Delete</button>
   </mat-expansion-panel>
 </mat-accordion>
 

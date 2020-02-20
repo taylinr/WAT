@@ -29,8 +29,13 @@ export class WebsiteCreateComponent implements OnInit {
       return;
     } else {
       let website: Website;
-      let domains: [string];
-      domains = [''];
+      let domains: string[];
+      domains = [];
+      let hostedIntern: boolean;
+
+      if (form.value.websiteHostedIntern !== 'indeterminate') {
+        hostedIntern = true;
+      }
 
       domains.push((form.value.websiteDomains));
 
