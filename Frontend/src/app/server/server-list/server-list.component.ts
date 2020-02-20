@@ -26,7 +26,9 @@ export class ServerListComponent implements OnInit {
   }
 
   onGetWebsites(id: string) {
-    this.getServerID.getWebsites(id);
+    if (id !== undefined) {
+      this.getServerID.getWebsites(id);
+    }
   }
 
   onDelete(id: string) {
