@@ -41,7 +41,7 @@ export class WebsiteCreateComponent implements OnInit {
       description = form.value.websiteDescription;
       createDate = form.value.websiteCreateDate;
       expirationDate = form.value.websiteExpirationDate;
-      hostedIntern = form.value.websiteHostedIntern === 'indeterminate'
+      hostedIntern = !(form.value.websiteHostedIntern === 'indeterminate');
 
       domains = [];
       const domainsString = form.value.websiteDomains;

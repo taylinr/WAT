@@ -1,4 +1,4 @@
-<button class="add col-2" mat-fab color="accent" (click)="toggleForm()"> + </button>
+<button class="add col-2" mat-fab color="accent" (click)="toggleForm()"><span *ngIf="!showForm"><i class="fas fa-plus"></i></span> <span *ngIf="showForm"><i class="fas fa-plus cross"></i></span></button>
 
 
 <mat-card *ngIf="showForm" class="row col-12">

@@ -6,7 +6,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgba(103, 58, 183, 0.5); }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgba(103, 58, 183, 0.3); }
 main{
   max-width: 1200px;
   margin: auto;
@@ -52,6 +52,7 @@ button.delete{
 button.add{
   float: right;
   margin-bottom: 25px;
+  transition: 0.5s;
 }
 
 button.submit{
@@ -104,4 +105,10 @@ hr{
   border: none;
   border-top: 1px solid rgba(0,0,0,.12);
   margin-right: 60px;
+}
+
+
+.cross{
+  transform:rotate(45deg);
+  transition: 0.5s;
 }

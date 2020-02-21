@@ -116,12 +116,13 @@ app.post('/websites', (req, res) => {
         let createDate = req.body.createDate;
         let expirationDate = req.body.expirationDate;
         let hostedIntern = req.body.hostedIntern;
-
+        let WPVersion = req.body.wpVersion;
+        let WPAutoUpdate = req.body.autoUpdate;
         let _serverID = req.body._serverID;
 
 
 
-        let newWebsite = new Website({title, domains, description, createDate, expirationDate, hostedIntern, _serverID});
+        let newWebsite = new Website({title, domains, description, createDate, expirationDate, hostedIntern, WPVersion, WPAutoUpdate, _serverID});
 
         newWebsite.save().then((websiteDoc) => {
             res.send(websiteDoc);
