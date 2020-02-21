@@ -1,21 +1,24 @@
-<h2>Server List:</h2>
+<mat-card class="col-12 row server-list">
+  <h2 class="col-5">Server List:</h2>
+  <app-server-create></app-server-create>
 
-<mat-accordion multi="true" *ngIf="servers.length > 0" >
-  <mat-expansion-panel *ngFor="let server of servers">
-    <mat-expansion-panel-header (click)="onGetWebsites(server._id)">
-      <h3><b>{{server.ip}}</b>
-        {{server.title}}</h3>
-    </mat-expansion-panel-header>
-    <app-website-create></app-website-create>
-    <p *ngIf="server.description">Description: {{server.description}}</p>
-    <p *ngIf="server.login">Additional Login:  {{server.login}}</p>
-    <p *ngIf="server.software">Operating System: {{server.software}}</p>
-    <app-website-list></app-website-list>
-    <button mat-button color="warn" (click)="onDelete(server._id)">Delete</button>
-  </mat-expansion-panel>
-</mat-accordion>
+  <mat-accordion *ngIf="servers.length > 0" multi="true" class="col-12 row">
+    <mat-expansion-panel *ngFor="let server of servers" (click)="getServerIDForWebsites(server._id)">
+      <mat-expansion-panel-header class="row">
+        <div class="col-2 server-ip"><h3>{{server.ip}}</h3></div>
+        <div class="col-6 server-title"><h3>{{server.title}}</h3></div>
+      </mat-expansion-panel-header>
+      <div class="col-12 row">
+        <div class="col-2" *ngIf="server.software"><label>Operating System:</label> <p>{{server.software}}</p></div>
+        <div class="col-2" *ngIf="server.login"><label>Additional Login:</label>  <p>{{server.login}}</p></div>
+        <div class="col-6" *ngIf="server.description"><label>Description:</label> <p>{{server.description}}</p></div>
+      </div>
+      <app-website-list [serverID]="server._id"></app-website-list>
+      <div class="col-12">
+        <button class="delete" mat-button color="warn" (click)="onDelete(server._id)">Delete</button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-<p *ngIf="servers.length <= 0">No servers added yet!</p>
-
-
-
+  <p class="col-12 row" *ngIf="servers.length <= 0">No servers added yet!</p>
+</mat-card>

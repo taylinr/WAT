@@ -1,37 +1,46 @@
+<div class="col-12 website-list">
+  <h3 class="col-5">Website List:</h3>
+  <app-website-create></app-website-create>
 
-
-<mat-accordion multi="true" *ngIf="websites.length > 0">
-  <h3>Website List:</h3>
-
-  <mat-expansion-panel *ngFor="let website of websites">
-    <mat-expansion-panel-header>
-      <h3>{{website.title}}</h3>
-    </mat-expansion-panel-header>
-    <p *ngIf="website.createDate">
-      <label>Creation Date:</label>
-      {{website.createDate}}
-    </p>
-    <p *ngIf="website.expirationDate">
-      <label>Epiration Date:</label>
-      {{website.expirationDate}}
-    </p>
-    <p *ngIf="website.hostedIntern">
-      <label>Hosted Intern:</label>
-      {{website.hostedIntern}}
-    </p>
-    <div *ngIf="website.domains.length > 0">
-      <label>Domains:</label>
-      <div *ngFor="let domain of website.domains">
-        <p>{{domain}}</p>
+  <mat-accordion class="col-12 row" multi="true" *ngIf="websites.length > 0">
+    <mat-expansion-panel class="col-12 row" *ngFor="let website of websites">
+      <mat-expansion-panel-header>
+        <h3>{{website.title}}</h3>
+      </mat-expansion-panel-header>
+      <div class="mat-expansion-panel-body">
+        <div  *ngIf="website.createDate" class="col-12">
+          <label>Creation Date:</label>
+          <p>{{website.createDate}}</p>
+        </div>
+        <div *ngIf="website.expirationDate" class="col-2">
+          <label>Expiration Date:</label>
+          <p>{{website.expirationDate}}</p>
+        </div>
+        <div *ngIf="website.hostedIntern" class="col-2">
+          <label>Hosted Intern:</label>
+          <p>{{website.hostedIntern}}</p>
+        </div>
+        <div class="col-12">
+          <div *ngIf="website.domains.length > 0" class="col-6">
+            <label>Domains:</label>
+            <div *ngFor="let domain of website.domains">
+              <p>{{domain}}</p>
+            </div>
+          </div>
+          <div *ngIf="website.description" class="col-6">
+            <label>Description:</label>
+            <p>{{website.description}}</p>
+          </div>
+        </div>
+        <div class="col-12">
+            <button class="delete" mat-button color="warn" (click)="onDelete(website._id)">Delete</button>
+        </div>
       </div>
-    </div>
-    <p *ngIf="website.description">
-      <label>Description:</label>
-      {{website.description}}
-    </p>
-    <button mat-button color="warn" (click)="onDelete(website._id)">Delete</button>
-  </mat-expansion-panel>
+    </mat-expansion-panel>
 
-</mat-accordion>
+  </mat-accordion>
 
-<p *ngIf="websites.length <= 0">No websites added yet!</p>
+  <p class="col-12 row" *ngIf="websites.length <= 0">No websites added yet!</p>
+
+
+</div>

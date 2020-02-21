@@ -3,13 +3,13 @@ export class Website {
   title: string;
   _serverID: string;
   description?: string;
-  domains?: [string];
+  domains?: string[];
   createDate?: string;
   expirationDate?: string;
   hostedIntern?: boolean;
 
 
-  constructor(title: string, serverID: string, description?: string, domains?: [string], createDate?: string,
+  constructor(title: string, serverID: string, description?: string, domains?: string[], createDate?: string,
               expirationDate?: string, hostedIntern?: boolean) {
 
     this.title = title;

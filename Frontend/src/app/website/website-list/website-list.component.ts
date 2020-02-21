@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Website} from '../website.model';
 import {WebsiteService} from '../../services/website/website.service';
-import {GetServerIDService} from '../../services/interaction/get-server-id.service';
 import {WebsiteInteractionService} from '../../services/interaction/website-interaction.service';
 
 
@@ -13,20 +12,11 @@ import {WebsiteInteractionService} from '../../services/interaction/website-inte
 export class WebsiteListComponent implements OnInit {
 
   websites: Website[] = [];
-  serverID: string;
+  @Input() serverID: string;
 
-  constructor(private websiteService: WebsiteService, private getServerID: GetServerIDService, private websiteInteractionService: WebsiteInteractionService) {}
+  constructor(private websiteService: WebsiteService, private websiteInteractionService: WebsiteInteractionService) {}
 
   ngOnInit(): void {
-    this.getServerID.newServerID$.subscribe(
-      NewServerID => {
-        this.serverID = NewServerID;
-        this.websiteService.getWebsite(this.serverID).subscribe((websites: Website[]) => {
-          this.websites = websites;
-        });
-      }
-    );
-
     if (this.serverID !== undefined) {
       this.websiteService.getWebsite(this.serverID).subscribe((websites: Website[]) => {
         this.websites = websites;

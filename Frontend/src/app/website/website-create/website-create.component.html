@@ -1,8 +1,10 @@
-<button mat-fab color="accent" (click)="toggleForm()"> + </button>
-<mat-card *ngIf="showForm">
+<button class="add col-2" mat-fab color="accent" (click)="toggleForm()"> + </button>
+
+
+<mat-card *ngIf="showForm" class="row col-12">
   <form (submit)="onAddWebsite(websiteForm)" #websiteForm="ngForm">
 
-    <mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>Title</mat-label>
       <input
         matInput
@@ -16,7 +18,7 @@
         Title is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>Domains</mat-label>
       <input
         matInput
@@ -30,24 +32,29 @@
         At least one Domain is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-    <mat-checkbox
-      name="websiteHostedIntern"
-      ngModel>
-      HostedIntern
-    </mat-checkbox>
-<!--    <mat-form-field>-->
-<!--      <mat-label>Created at: </mat-label>-->
-<!--      <input matInput [matDatepicker]="picker1">-->
-<!--      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>-->
-<!--      <mat-datepicker #picker1></mat-datepicker>-->
-<!--    </mat-form-field>-->
-<!--    <mat-form-field>-->
-<!--      <mat-label>Expiring at: </mat-label>-->
-<!--      <input matInput [matDatepicker]="picker1">-->
-<!--      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>-->
-<!--      <mat-datepicker #picker1></mat-datepicker>-->
-<!--    </mat-form-field>-->
-    <mat-form-field>
+    <mat-form-field class="col-6">
+      <mat-label>Created at: </mat-label>
+      <input matInput
+             [matDatepicker]="picker"
+             [formControl]="date"
+             name="websiteCreateDate"
+             ngModel
+             required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="col-6">
+      <mat-label>Expiring at: </mat-label>
+      <input matInput
+             [matDatepicker]="picker2"
+             name="websiteExpirationDate"
+             ngModel
+             required
+      >
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>Description</mat-label>
       <textarea
         matInput
@@ -56,12 +63,19 @@
         ngModel
       ></textarea>
     </mat-form-field>
-    <button
-      mat-raised-button
-      type="submit"
-    >
-      Save Website
-    </button>
+    <mat-checkbox class="col-6"
+      name="websiteHostedIntern"
+      ngModel>
+      Hosted intern
+    </mat-checkbox>
+    <div class="col-12">
+      <button
+        class="submit"
+        mat-raised-button
+        type="submit">
+        Save Website
+      </button>
+    </div>
   </form>
 </mat-card>
 

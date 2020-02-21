@@ -1,8 +1,8 @@
 
-<button mat-fab color="primary" (click)="toggleForm()"> + </button>
-<mat-card *ngIf="showForm">
+<button class="add col-2" mat-fab color="primary" (click)="toggleForm()"> + </button>
+<mat-card class="col-12" *ngIf="showForm">
   <form (submit)="onAddServer(serverForm)" #serverForm="ngForm">
-    <mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>IP</mat-label>
       <input
         matInput
@@ -16,7 +16,7 @@
         IP is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>Title / Alias</mat-label>
       <input
         matInput
@@ -25,12 +25,16 @@
         ngModel
       />
     </mat-form-field>
-    <mat-checkbox
-      name="serverlogin"
-      ngModel>
-      Additional Login
-    </mat-checkbox>
-    <mat-form-field>
+    <mat-form-field class="col-6">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        rows="4"
+        name="serverDescription"
+        ngModel
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="col-6">
       <mat-label>Software</mat-label>
       <select
         matNativeControl
@@ -41,20 +45,20 @@
         <option value="Windows">Windows</option>
       </select>
     </mat-form-field>
-    <mat-form-field>
-      <mat-label>Description</mat-label>
-      <textarea
-        matInput
-        rows="2"
-        name="serverDescription"
-        ngModel
-      ></textarea>
-    </mat-form-field>
-    <button
-      mat-raised-button
-      type="submit">
-      Save Server
-    </button>
+    <mat-checkbox
+      class="col-6"
+      name="serverlogin"
+      ngModel>
+      Additional Login
+    </mat-checkbox>
+    <div class="col-12">
+      <button
+        class="submit"
+        mat-raised-button
+        type="submit">
+        Save Server
+      </button>
+    </div>
   </form>
 </mat-card>
 

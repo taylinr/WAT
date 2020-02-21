@@ -32,8 +32,11 @@ export class ServerCreateComponent implements OnInit {
       this.serverService.createServer(server).subscribe((response: Server) => {
         console.log(response);
         this.interactionService.updateList(response);
+        if (response) {
+          form.reset();
+          this.showForm = false;
+        }
       });
-      form.reset();
     }
   }
 
