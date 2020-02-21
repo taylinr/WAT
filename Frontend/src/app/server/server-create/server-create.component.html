@@ -2,6 +2,7 @@
 <button class="add col-2" mat-fab color="primary" (click)="toggleForm()"> + </button>
 <mat-card class="col-12" *ngIf="showForm">
   <form (submit)="onAddServer(serverForm)" #serverForm="ngForm">
+    <h4>Add a new server:</h4>
     <mat-form-field class="col-6">
       <mat-label>IP</mat-label>
       <input

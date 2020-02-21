@@ -23,8 +23,9 @@
         <div class="col-12">
           <div *ngIf="website.domains.length > 0" class="col-6">
             <label>Domains:</label>
-            <div *ngFor="let domain of website.domains">
+            <div *ngFor="let domain of website.domains last as last">
               <p>{{domain}}</p>
+              <div *ngIf="website.domains.length > 1 && !last"><hr /></div>
             </div>
           </div>
           <div *ngIf="website.description" class="col-6">

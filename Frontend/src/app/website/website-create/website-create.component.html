@@ -2,8 +2,8 @@
 
 
 <mat-card *ngIf="showForm" class="row col-12">
+  <h4>Add a new website:</h4>
   <form (submit)="onAddWebsite(websiteForm)" #websiteForm="ngForm">
-
     <mat-form-field class="col-6">
       <mat-label>Title</mat-label>
       <input
@@ -36,7 +36,6 @@
       <mat-label>Created at: </mat-label>
       <input matInput
              [matDatepicker]="picker"
-             [formControl]="date"
              name="websiteCreateDate"
              ngModel
              required>

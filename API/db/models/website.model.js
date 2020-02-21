@@ -33,6 +33,16 @@ const WebsiteSchema = new mongoose.Schema({
         required: false,
     },
 
+    WPVersion: {
+        type: String,
+        required: false,
+    },
+
+    WPAutoUpdate: {
+        type: Boolean,
+        required: false,
+    },
+
     _serverID:{
         type: mongoose.Types.ObjectId,
         required: true

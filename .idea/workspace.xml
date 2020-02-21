@@ -3,26 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ac899fe3-173e-481d-bbda-6f734fdcc187" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/db/models/website.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/db/models/website.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -39,33 +26,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -78,22 +38,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="39" selection-start-column="39" selection-end-column="39" />
+            <state relative-caret-position="170">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -118,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/server/server-list/server-list.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/server/server.model.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
@@ -142,10 +98,8 @@
         <option value="$PROJECT_DIR$/API/db/models/server.model.js" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/interaction/get-server-id.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/interaction/website-interaction.service.ts" />
-        <option value="$PROJECT_DIR$/API/db/models/website.model.js" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/web-request/web-request.service.ts" />
-        <option value="$PROJECT_DIR$/API/app.js" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/website/website.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server.model.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website.model.ts" />
@@ -155,20 +109,23 @@
         <option value="$PROJECT_DIR$/Frontend/src/fontawesome/solid.css" />
         <option value="$PROJECT_DIR$/Frontend/src/fontawesome/all.min.css" />
         <option value="$PROJECT_DIR$/Frontend/src/index.html" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/header/header.component.css" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.css" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" />
+        <option value="$PROJECT_DIR$/API/app.js" />
+        <option value="$PROJECT_DIR$/API/db/models/website.model.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/styles.css" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/.gitignore" />
       </list>
     </option>
   </component>
@@ -189,6 +146,24 @@
             <path>
               <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
               <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
@@ -359,18 +334,18 @@
       <workItem from="1582119890963" duration="5793000" />
       <workItem from="1582125919354" duration="5681000" />
       <workItem from="1582191485288" duration="15218000" />
-      <workItem from="1582277302530" duration="12741000" />
+      <workItem from="1582277302530" duration="16833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160430000" />
+    <option name="totallyTimeSpent" value="164522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2531983" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2531983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -386,7 +361,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.3557047" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.3557047" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159913" side_tool="true" weight="0.32981783" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -448,7 +423,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/server/server.model.ts" />
     <entry file="file://$PROJECT_DIR$/server.js" />
     <entry file="file://$PROJECT_DIR$/API/bin/www" />
     <entry file="file://$PROJECT_DIR$/API/package.json">
@@ -557,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/db/models/website.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/website/website.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -616,16 +576,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/fontawesome/solid.css" />
     <entry file="file://$PROJECT_DIR$/Frontend/src/fontawesome/all.min.css" />
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -647,13 +597,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/test.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -721,17 +664,55 @@
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html">
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
+        <state relative-caret-position="340">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/db/models/website.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="97" column="1" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+        <state relative-caret-position="420">
+          <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -742,17 +723,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website.model.ts">
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="36" />
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -766,10 +740,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html">
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="170">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
         </state>
       </provider>
     </entry>
