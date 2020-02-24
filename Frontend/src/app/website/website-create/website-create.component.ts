@@ -15,6 +15,10 @@ export class WebsiteCreateComponent implements OnInit {
   showForm = false;
   serverID: string;
   date = new FormControl(new Date());
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
+  toppings: string[] = ['One', 'Two', 'Three'];
+
 
   constructor(private websiteService: WebsiteService, private interactionService: WebsiteInteractionService, private getServerID: GetServerIDService) { }
 
@@ -36,21 +40,25 @@ export class WebsiteCreateComponent implements OnInit {
       let createDate: string;
       let expirationDate: string;
       let description: string;
+      let wpVersion: string;
+      let wpAutoUpdate: boolean;
 
       title = form.value.websiteTitle;
       description = form.value.websiteDescription;
       createDate = form.value.websiteCreateDate;
       expirationDate = form.value.websiteExpirationDate;
       hostedIntern = !(form.value.websiteHostedIntern === 'indeterminate');
-
+      wpVersion = form.value.websiteWpVersion;
+      wpAutoUpdate = !(form.value.websiteWpAutoUpdate === 'indeterminate');
       domains = [];
+
       const domainsString = form.value.websiteDomains;
       const domainsStringArray = domainsString.split(', ');
       for (let i = 0; i < domainsStringArray.length; i++) {
         domains.push((domainsStringArray[i]));
       }
 
-      website = new Website(title, this.serverID, description, domains, createDate, expirationDate, hostedIntern);
+      website = new Website(title, this.serverID, description, domains, createDate, expirationDate, hostedIntern, wpVersion,  wpAutoUpdate);
 
       this.websiteService.createWebsite(website).subscribe((response: Website) => {
         console.log(response);

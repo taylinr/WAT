@@ -17,6 +17,9 @@
       <mat-error *ngIf="title.invalid">
         Title is <strong>required</strong>
       </mat-error>
+      <div *ngIf="title.valid" class="check">
+        <i class="fas fa-check"></i>
+      </div>
     </mat-form-field>
     <mat-form-field class="col-6">
       <mat-label>Domains</mat-label>
@@ -31,6 +34,9 @@
       <mat-error *ngIf="domains.invalid">
         At least one Domain is <strong>required</strong>
       </mat-error>
+      <div *ngIf="domains.valid" class="check">
+        <i class="fas fa-check"></i>
+      </div>
     </mat-form-field>
     <mat-form-field class="col-6">
       <mat-label>Created at: </mat-label>
@@ -38,9 +44,13 @@
              [matDatepicker]="picker"
              name="websiteCreateDate"
              ngModel
-             required>
+             required
+             #picker1="ngModel">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
+      <div *ngIf="picker1.valid" class="check">
+        <i class="fas fa-check"></i>
+      </div>
     </mat-form-field>
     <mat-form-field class="col-6">
       <mat-label>Expiring at: </mat-label>
@@ -49,9 +59,12 @@
              name="websiteExpirationDate"
              ngModel
              required
-      >
+             #picker2="ngModel">
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
+      <div *ngIf="picker2.valid" class="check">
+        <i class="fas fa-check"></i>
+      </div>
     </mat-form-field>
     <mat-form-field class="col-6">
       <mat-label>Description</mat-label>
@@ -67,6 +80,41 @@
       ngModel>
       Hosted intern
     </mat-checkbox>
+    <div class="col-12 box">
+      <h4>WordPress Infos:</h4>
+      <div class="col-6">
+
+        <mat-checkbox
+            class="col-3"
+            name="websiteWpAutoUpdate"
+            #checkAutoComplete
+            ngModel>
+          Auto Update
+        </mat-checkbox>
+
+        <mat-form-field *ngIf="!checkAutoComplete.checked" class="col-9">
+          <mat-label>WP-Version</mat-label>
+          <input type="text" name="websiteWpVersion" matInput [formControl]="myControl" [matAutocomplete]="auto" [disabled]="checkAutoComplete.checked">
+        </mat-form-field>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option" [disabled]="checkAutoComplete.checked">{{option}}</mat-option>
+        </mat-autocomplete>
+
+      </div>
+      <div class="col-6">
+        <mat-form-field class="col-12">
+          <mat-label>User</mat-label>
+          <mat-select
+            matNativeControl
+            name="websiteWpUser"
+            ngModel
+            multiple
+            [formControl]="toppings">
+            <mat-option *ngFor="let topping of toppings" [value]="topping">{{topping}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
     <div class="col-12">
       <button
         class="submit"
@@ -75,6 +123,7 @@
         Save Website
       </button>
     </div>
+
   </form>
 </mat-card>
 

@@ -34,6 +34,17 @@
           </div>
         </div>
         <div class="col-12">
+          <div class="col-6">
+            <label>Version:</label>
+            <div *ngIf="website.wpAutoUpdate">
+              <p>Auto Update</p>
+            </div>
+            <div *ngIf="website.wpVersion !== undefined">
+              <p>{{website.wpVersion}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
             <button class="delete" mat-button color="warn" (click)="onDelete(website._id)">Delete</button>
         </div>
       </div>

@@ -112,3 +112,18 @@ hr{
   transform:rotate(45deg);
   transition: 0.5s;
 }
+
+.check{
+  float: right;
+}
+
+.check i{
+  color: lightgreen;
+  margin: -20px;
+}
+
+form .box{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 15px
+}
