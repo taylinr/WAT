@@ -21,9 +21,13 @@ export class WebsiteService {
     const createDate = website.createDate;
     const expirationDate = website.expirationDate;
     const hostedIntern = website.hostedIntern;
+    const wpAutoUpdate = website.wpAutoUpdate;
+    const wpVersion = website.wpVersion;
+
+    console.log("Service: " + wpVersion + " " + wpAutoUpdate);
 
     console.log(_serverID);
-    return this.webReqService.post('websites', {title, _serverID, description, domains, createDate, expirationDate, hostedIntern});
+    return this.webReqService.post('websites', {title, _serverID, description, domains, createDate, expirationDate, hostedIntern,  wpVersion, wpAutoUpdate});
   }
 
   getWebsite(serverID: string) {

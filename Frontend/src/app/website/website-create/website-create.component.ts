@@ -12,6 +12,10 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./website-create.component.css']
 })
 export class WebsiteCreateComponent implements OnInit {
+
+
+
+  constructor(private websiteService: WebsiteService, private interactionService: WebsiteInteractionService, private getServerID: GetServerIDService) { }
   showForm = false;
   serverID: string;
   date = new FormControl(new Date());
@@ -19,8 +23,6 @@ export class WebsiteCreateComponent implements OnInit {
   options: string[] = ['One', 'Two', 'Three'];
   toppings: string[] = ['One', 'Two', 'Three'];
 
-
-  constructor(private websiteService: WebsiteService, private interactionService: WebsiteInteractionService, private getServerID: GetServerIDService) { }
 
   ngOnInit(): void {
     this.getServerID.newServerID$.subscribe(
@@ -48,9 +50,13 @@ export class WebsiteCreateComponent implements OnInit {
       createDate = form.value.websiteCreateDate;
       expirationDate = form.value.websiteExpirationDate;
       hostedIntern = !(form.value.websiteHostedIntern === 'indeterminate');
-      wpVersion = form.value.websiteWpVersion;
+      if (form.value.websiteWpVersion !== undefined) {
+        wpVersion = form.value.websiteWpVersion;
+      }
       wpAutoUpdate = !(form.value.websiteWpAutoUpdate === 'indeterminate');
       domains = [];
+
+      console.log('Wordpress: ' + wpVersion + ' ' + wpAutoUpdate);
 
       const domainsString = form.value.websiteDomains;
       const domainsStringArray = domainsString.split(', ');
@@ -74,4 +80,5 @@ export class WebsiteCreateComponent implements OnInit {
   toggleForm() {
     this.showForm = !this.showForm;
   }
+
 }

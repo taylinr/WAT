@@ -1,65 +1,98 @@
 
-<button class="add col-2" mat-fab color="primary" (click)="toggleForm()"><span *ngIf="!showForm"><i class="fas fa-plus"></i></span> <span *ngIf="showForm"><i class="fas fa-plus cross"></i></span></button>
-<mat-card class="col-12" *ngIf="showForm">
-  <form (submit)="onAddServer(serverForm)" #serverForm="ngForm">
-    <h4>Add a new server:</h4>
-    <mat-form-field class="col-6">
-      <mat-label>IP</mat-label>
-      <input
-        matInput
-        type="text"
-        name="serverIP"
-        ngModel
-        required
-        #ip="ngModel"
-      />
-      <mat-error *ngIf="ip.invalid">
-        IP is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <mat-form-field class="col-6">
-      <mat-label>Title / Alias</mat-label>
-      <input
-        matInput
-        type="text"
-        name="serverTitle"
-        ngModel
-      />
-    </mat-form-field>
-    <mat-form-field class="col-6">
-      <mat-label>Description</mat-label>
-      <textarea
-        matInput
-        rows="4"
-        name="serverDescription"
-        ngModel
-      ></textarea>
-    </mat-form-field>
-    <mat-form-field class="col-6">
-      <mat-label>Software</mat-label>
-      <select
-        matNativeControl
-        name="serverSoftware"
-        ngModel >
-        <option value="EngineX">Engine X</option>
-        <option value="Apache">Apache</option>
-        <option value="Windows">Windows</option>
-      </select>
-    </mat-form-field>
-    <mat-checkbox
-      class="col-6"
-      name="serverlogin"
-      ngModel>
-      Additional Login
-    </mat-checkbox>
-    <div class="col-12">
-      <button
-        class="submit"
-        mat-raised-button
-        type="submit">
-        Save Server
-      </button>
-    </div>
-  </form>
-</mat-card>
+<button class="add col-2" mat-fab color="primary" (click)="toggleForm()">
+  <span *ngIf="!showForm">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span *ngIf="showForm">
+    <i class="fas fa-plus cross"></i>
+  </span>
+</button>
+
+
+
+<div *ngIf="showForm">
+  <div class="modal">
+    <mat-card class="modal-content row">
+      <div class="col-12 row">
+        <button class="add" mat-fab color="primary" (click)="toggleForm()">
+          <span *ngIf="showForm">
+            <i class="fas fa-plus cross"></i>
+          </span>
+        </button>
+        <h3>Add a new server:</h3>
+      </div>
+      <form (submit)="onAddServer(serverForm)" #serverForm="ngForm">
+        <mat-form-field class="col-6">
+          <mat-label>IP</mat-label>
+          <input
+            matInput
+            type="text"
+            name="serverIP"
+            ngModel
+            required
+            minlength="5"
+            pattern="^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+            #ip="ngModel"
+          />
+          <div *ngIf="ip.valid" class="check">
+            <i class="fas fa-check"></i>
+          </div>
+          <mat-error *ngIf="ip.invalid &&  ip.errors.required">
+          IP is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf=" ip.invalid && ip.errors.pattern">
+            IP must be a IP Adress: XX.XX.XX.XX
+          </mat-error>
+          <mat-error *ngIf="ip.invalid && ip.errors.minlength">
+            IP must be at least 5 characters long.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <mat-label>Title / Alias</mat-label>
+          <input
+            matInput
+            type="text"
+            name="serverTitle"
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <mat-label>Description</mat-label>
+          <textarea
+            matInput
+            rows="4"
+            name="serverDescription"
+            ngModel
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <mat-label>Software</mat-label>
+          <select
+            matNativeControl
+            name="serverSoftware"
+            ngModel
+            #software="ngModel">
+            <option value="EngineX">Engine X</option>
+            <option value="Apache">Apache</option>
+            <option value="Windows">Windows</option>
+          </select>
+        </mat-form-field>
+        <mat-checkbox
+          class="col-6"
+          name="serverlogin"
+          ngModel>
+          Additional Login
+        </mat-checkbox>
+        <div class="col-12">
+          <button
+            class="submit"
+            mat-raised-button
+            type="submit">
+            Save Server
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
 

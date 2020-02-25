@@ -117,7 +117,7 @@ app.post('/websites', (req, res) => {
         let expirationDate = req.body.expirationDate;
         let hostedIntern = req.body.hostedIntern;
         let WPVersion = req.body.wpVersion;
-        let WPAutoUpdate = req.body.autoUpdate;
+        let WPAutoUpdate = req.body.wpAutoUpdate;
         let _serverID = req.body._serverID;
 
 

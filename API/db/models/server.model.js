@@ -17,6 +17,7 @@ const ServerSchema = new mongoose.Schema({
     login: {
         type: Boolean,
         required: false,
+        default: false
     },
 
     software: {

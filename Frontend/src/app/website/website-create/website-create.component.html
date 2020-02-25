@@ -1,8 +1,25 @@
-<button class="add col-2" mat-fab color="accent" (click)="toggleForm()"><span *ngIf="!showForm"><i class="fas fa-plus"></i></span> <span *ngIf="showForm"><i class="fas fa-plus cross"></i></span></button>
+<button class="add col-2" mat-fab color="accent" (click)="toggleForm()">
+  <span *ngIf="!showForm">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span *ngIf="showForm">
+    <i class="fas fa-plus cross"></i>
+  </span>
+</button>
 
 
-<mat-card *ngIf="showForm" class="row col-12">
-  <h4>Add a new website:</h4>
+<div *ngIf="showForm">
+  <div class="modal">
+
+<mat-card class="modal-content row">
+  <div class="col-12 row">
+  <button class="add" mat-fab color="accent" (click)="toggleForm()">
+      <span *ngIf="showForm">
+    <i class="fas fa-plus cross"></i>
+  </span>
+  </button>
+  <h3>Add a new website:</h3>
+  </div>
   <form (submit)="onAddWebsite(websiteForm)" #websiteForm="ngForm">
     <mat-form-field class="col-6">
       <mat-label>Title</mat-label>
@@ -22,36 +39,40 @@
       </div>
     </mat-form-field>
     <mat-form-field class="col-6">
-      <mat-label>Domains</mat-label>
+      <mat-label>Domains (seperated by comma)</mat-label>
       <input
         matInput
         type="text"
         name="websiteDomains"
         ngModel
         required
+        pattern="^\s*(?:(?:\w+(?:-+\w+)*\.)+[a-z]+)\s*(?:,\s*(?:(?:\w+(?:-+\w+)*\.)+[a-z]+)\s*)*$"
         #domains="ngModel"
       />
-      <mat-error *ngIf="domains.invalid">
-        At least one Domain is <strong>required</strong>
-      </mat-error>
       <div *ngIf="domains.valid" class="check">
         <i class="fas fa-check"></i>
       </div>
+      <mat-error *ngIf="domains.invalid && domains.errors.required">
+        At least one Domain is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="domains.invalid && domains.errors.pattern">
+        Domains must be seperated by comma & of pattern domainname.topleveldomain
+      </mat-error>
     </mat-form-field>
+
     <mat-form-field class="col-6">
       <mat-label>Created at: </mat-label>
       <input matInput
-             [matDatepicker]="picker"
+             [formControl]="date"
+             [matDatepicker]="picker1"
              name="websiteCreateDate"
              ngModel
              required
-             #picker1="ngModel">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-      <div *ngIf="picker1.valid" class="check">
-        <i class="fas fa-check"></i>
-      </div>
+             >
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
     </mat-form-field>
+
     <mat-form-field class="col-6">
       <mat-label>Expiring at: </mat-label>
       <input matInput
@@ -59,13 +80,11 @@
              name="websiteExpirationDate"
              ngModel
              required
-             #picker2="ngModel">
+             >
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
-      <div *ngIf="picker2.valid" class="check">
-        <i class="fas fa-check"></i>
-      </div>
     </mat-form-field>
+
     <mat-form-field class="col-6">
       <mat-label>Description</mat-label>
       <textarea
@@ -127,3 +146,5 @@
   </form>
 </mat-card>
 
+</div>
+</div>

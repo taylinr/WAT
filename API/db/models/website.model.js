@@ -33,12 +33,12 @@ const WebsiteSchema = new mongoose.Schema({
         required: false,
     },
 
-    WPVersion: {
+    wpVersion: {
         type: String,
         required: false,
     },
 
-    WPAutoUpdate: {
+    wpAutoUpdate: {
         type: Boolean,
         required: false,
     },
