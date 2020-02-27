@@ -151,3 +151,7 @@ form .box{
   max-width: 1200px;
 }
 
+.wp-user-list .mat-expansion-panel-spacing{
+  margin-top: 0 !important;
+}
+

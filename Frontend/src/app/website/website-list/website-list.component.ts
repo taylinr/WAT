@@ -17,11 +17,10 @@ export class WebsiteListComponent implements OnInit {
   constructor(private websiteService: WebsiteService, private websiteInteractionService: WebsiteInteractionService) {}
 
   ngOnInit(): void {
-    if (this.serverID !== undefined) {
-      this.websiteService.getWebsite(this.serverID).subscribe((websites: Website[]) => {
-        this.websites = websites;
-      });
-    }
+    this.websiteService.getWebsite(this.serverID).subscribe((websites: Website[]) => {
+      this.websites = websites;
+    });
+
 
     this.websiteInteractionService.newWebsite$.subscribe(
       websiteUpdate => { this.websites.push(websiteUpdate); }

@@ -1,0 +1,112 @@
+<button class="add col-2" mat-fab color="basic" (click)="toggleForm()">
+  <span *ngIf="!showForm">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span *ngIf="showForm">
+    <i class="fas fa-plus cross"></i>
+  </span>
+</button>
+
+<div *ngIf="showForm">
+  <div class="modal">
+    <mat-card class="modal-content row">
+      <div class="col-12 row">
+        <button class="add" mat-fab color="basic" (click)="toggleForm()">
+          <span *ngIf="showForm">
+            <i class="fas fa-plus cross"></i>
+          </span>
+        </button>
+        <h3>Add a new server:</h3>
+      </div>
+      <form (submit)="onAddUser(userForm)" #userForm="ngForm">
+        <mat-form-field class="col-6">
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="wpUserFirstName"
+            ngModel
+            required
+            minlength="2"
+            pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"
+            #firstName="ngModel"
+          />
+          <div *ngIf="firstName.valid" class="check">
+            <i class="fas fa-check"></i>
+          </div>
+          <mat-error *ngIf="firstName.invalid &&  firstName.errors.required">
+            First Name is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf=" firstName.invalid && firstName.errors.pattern">
+            First Name should begin with a Capital Letter and no special characters except: ",.'-"
+          </mat-error>
+          <mat-error *ngIf="firstName.invalid && firstName.errors.minlength">
+            First Name must be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-6">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="wpUserLastName"
+            ngModel
+            required
+            minlength="2"
+            pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"
+            #lastName="ngModel"
+          />
+          <div *ngIf="lastName.valid" class="check">
+            <i class="fas fa-check"></i>
+          </div>
+          <mat-error *ngIf="lastName.invalid &&  lastName.errors.required">
+            Last Name is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf=" lastName.invalid && lastName.errors.pattern">
+            Last Name should begin with a Capital Letter and no special characters except: ",.'-"
+          </mat-error>
+          <mat-error *ngIf="lastName.invalid && lastName.errors.minlength">
+            Last Name must be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <mat-label>E-Mail:</mat-label>
+          <input
+            matInput
+            type="email"
+            name="wpUserMail"
+            ngModel
+            required
+            minlength="5"
+            pattern='^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)'
+            #mail="ngModel"
+          />
+          <div *ngIf="mail.valid" class="check">
+            <i class="fas fa-check"></i>
+          </div>
+          <mat-error *ngIf="mail.invalid &&  mail.errors.required">
+            E-Mail is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="mail.invalid && mail.errors.pattern">
+            E-Mail must be in mail format
+          </mat-error>
+          <mat-error *ngIf="mail.invalid && mail.errors.minlength">
+            E-Mail must be at least 5 characters long.
+          </mat-error>
+        </mat-form-field>
+
+
+
+        <div class="col-12">
+          <button
+            class="submit"
+            mat-raised-button
+            type="submit">
+            Save User
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

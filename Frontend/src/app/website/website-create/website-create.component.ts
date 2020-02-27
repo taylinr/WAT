@@ -13,8 +13,6 @@ import {FormControl} from '@angular/forms';
 })
 export class WebsiteCreateComponent implements OnInit {
 
-
-
   constructor(private websiteService: WebsiteService, private interactionService: WebsiteInteractionService, private getServerID: GetServerIDService) { }
   showForm = false;
   serverID: string;

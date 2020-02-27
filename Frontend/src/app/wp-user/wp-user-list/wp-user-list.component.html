@@ -1,0 +1,21 @@
+<mat-card class="col-12 row wp-user-list">
+  <h2 class="col-5">Wordpress-User List:</h2>
+  <app-wp-user-create class="row"></app-wp-user-create>
+
+  <mat-accordion *ngIf="users.length > 0" multi="true" class="col-12">
+    <mat-expansion-panel *ngFor="let user of users" class="col-6">
+      <mat-expansion-panel-header class="row">
+        <div class="col-12"><h3>{{user.firstName}} {{user.lastName}}</h3></div>
+      </mat-expansion-panel-header>
+      <div class="col-12 row">
+        <div class="col-2" *ngIf="user.mail"><label>E-Mail:</label> <p>{{user.mail}}</p></div>
+      </div>
+      <div class="col-12">
+        <button class="delete" mat-button color="warn" (click)="onDelete(user._id)">Delete</button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <p class="col-12 row" *ngIf="users.length <= 0">No users added yet!</p>
+</mat-card>
+

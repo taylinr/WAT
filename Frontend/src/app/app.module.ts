@@ -21,6 +21,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { WpUserListComponent } from './wp-user/wp-user-list/wp-user-list.component';
+import { WpUserCreateComponent } from './wp-user/wp-user-create/wp-user-create.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     ServerListComponent,
     HeaderComponent,
     WebsiteListComponent,
-    WebsiteCreateComponent
+    WebsiteCreateComponent,
+    WpUserListComponent,
+    WpUserCreateComponent,
   ],
   imports: [
     FormsModule,
