@@ -80,6 +80,10 @@ app.delete('/servers/:id', (req, res) => {
             {$set: {"deleteFlag": true} }).then(() => {
             res.sendStatus(200);
         });
+
+        Website.find({$and: [{_serverID: req.params.id}, {deleteFlag: false}]}).updateMany({$set: {"deleteFlag": true}}).then(() => {
+            res.sendStatus(200);
+        });
     } catch(error){
         res.status(error.response.status);
         return res.send(error.message);
@@ -90,6 +94,22 @@ app.delete('/servers/:id', (req, res) => {
 
 
 /*WEBSITES*/
+
+
+/**
+ * GET /websites
+ * Get all websites
+ */
+app.get('/websites', (req, res) => {
+    try {
+        Website.find({deleteFlag: false}).then((websites) => {res.send(websites)});
+    } catch(error){
+        res.status(error.response.status);
+        return res.send(error.message);
+    }
+});
+
+
 /**
  * GET /servers/:serverid/websites
  * Get all websites for a server
@@ -116,13 +136,15 @@ app.post('/websites', (req, res) => {
         let createDate = req.body.createDate;
         let expirationDate = req.body.expirationDate;
         let hostedIntern = req.body.hostedIntern;
-        let WPVersion = req.body.wpVersion;
-        let WPAutoUpdate = req.body.wpAutoUpdate;
+        let wpVersion = req.body.wpVersion;
+        let wpAutoUpdate = req.body.wpAutoUpdate;
         let _serverID = req.body._serverID;
 
 
 
-        let newWebsite = new Website({title, domains, description, createDate, expirationDate, hostedIntern, WPVersion, WPAutoUpdate, _serverID});
+        let newWebsite = new Website({title, domains, description, createDate, expirationDate, hostedIntern, wpVersion, wpAutoUpdate, _serverID});
+
+        console.log('App, New Website :' + newWebsite);
 
         newWebsite.save().then((websiteDoc) => {
             res.send(websiteDoc);
@@ -181,21 +203,6 @@ app.get('/wp-users', (req, res) => {
     }
 });
 
-
-
-/**
- * GET /users/:website-id
- * Get all users for a website
- */
-app.get('/users/:id', (req, res) => {
-    try {
-        WpUser.find({ $and: [{_websiteID: req.params.id}, {deleteFlag: false}] }).then((websites) => {res.send(websites)});
-    } catch(error){
-        res.status(error.response.status);
-        return res.send(error.message);
-    }
-});
-
 /**
  * POST /wp-users
  * create a wp-user
@@ -205,7 +212,7 @@ app.post('/wp-users', (req, res) => {
         let firstName = req.body.firstName;
         let lastName = req.body.lastName;
         let mail = req.body.mail;
-        let _websiteID = req.body. _websiteID;
+        let _websiteID = req.body._websiteID;
         let newWpUser = new WpUser({firstName, lastName, mail, _websiteID});
         newWpUser.save().then((serverDoc) => {
             res.send(serverDoc);

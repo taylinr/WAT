@@ -101,25 +101,21 @@
     </mat-checkbox>
     <div class="col-12 box">
       <h4>WordPress Infos:</h4>
-      <div class="col-6">
+      <mat-checkbox
+          class="col-12"
+          name="websiteWpAutoUpdate"
+          #checkAutoComplete
+          ngModel>
+        Auto Update
+      </mat-checkbox>
 
-        <mat-checkbox
-            class="col-3"
-            name="websiteWpAutoUpdate"
-            #checkAutoComplete
-            ngModel>
-          Auto Update
-        </mat-checkbox>
-
-        <mat-form-field *ngIf="!checkAutoComplete.checked" class="col-9">
-          <mat-label>WP-Version</mat-label>
-          <input type="text" name="websiteWpVersion" matInput [formControl]="myControl" [matAutocomplete]="auto" [disabled]="checkAutoComplete.checked">
-        </mat-form-field>
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option" [disabled]="checkAutoComplete.checked">{{option}}</mat-option>
-        </mat-autocomplete>
-
-      </div>
+      <mat-form-field *ngIf="!checkAutoComplete.checked" class="col-6">
+        <mat-label>WP-Version</mat-label>
+        <input type="text" name="websiteWpVersion" matInput [formControl]="wpVersionsControl" [matAutocomplete]="auto" [disabled]="checkAutoComplete.checked">
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let version of wpVersions" [value]="version" [disabled]="checkAutoComplete.checked">{{version}}</mat-option>
+      </mat-autocomplete>
       <div class="col-6">
         <mat-form-field class="col-12">
           <mat-label>User</mat-label>
@@ -128,8 +124,8 @@
             name="websiteWpUser"
             ngModel
             multiple
-            [formControl]="toppings">
-            <mat-option *ngFor="let topping of toppings" [value]="topping">{{topping}}</mat-option>
+            [formControl]="userNamesControl">
+            <mat-option *ngFor="let username of userNames" [value]="username">{{username}}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>

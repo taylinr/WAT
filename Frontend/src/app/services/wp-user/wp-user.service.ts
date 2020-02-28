@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {WebRequestService} from '../web-request/web-request.service';
 import {WpUser} from '../../wp-user/wp-user.model';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +14,7 @@ export class WpUserService {
     const lastName = wpUser.lastName;
     const mail = wpUser.mail;
     const _websiteID = wpUser._websiteID;
-    return this.webReqService.post('websites', {firstName, lastName, mail, _websiteID});
+    return this.webReqService.post('wp-users', {firstName, lastName, mail, _websiteID});
   }
 
   getAllWpUser() {
@@ -24,12 +22,11 @@ export class WpUserService {
     return wpUser;
   }
 
-  getWpUser(websiteID: string) {
-    const wpUser = this.webReqService.get('wp-users/' + websiteID);
-    return wpUser;
-  }
-
   deleteWpUser(wpUserID: string) {
     return this.webReqService.delete('wp-users/' + wpUserID );
+  }
+
+  updateWpUser(wpUserID: string, user: WpUser) {
+    return this.webReqService.patch('wp-users/' + wpUserID, {user} );
   }
 }

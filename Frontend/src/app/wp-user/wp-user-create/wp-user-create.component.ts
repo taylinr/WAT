@@ -3,6 +3,8 @@ import {FormControl, NgForm, Validators} from '@angular/forms';
 import {WpUser} from '../wp-user.model';
 import {WpUserService} from '../../services/wp-user/wp-user.service';
 import {WpUserInteractionService} from '../../services/interaction/wp-user-interaction.service';
+import {Website} from '../../website/website.model';
+import {WebsiteService} from '../../services/website/website.service';
 
 @Component({
   selector: 'app-wp-user-create',
@@ -12,11 +14,19 @@ import {WpUserInteractionService} from '../../services/interaction/wp-user-inter
 export class WpUserCreateComponent implements OnInit {
 
   showForm = false;
-  websites: string[];
+  websites: Website[];
+  options =  new FormControl();
+  optionList: string[] = [];
 
-  constructor(private userService: WpUserService, private interactionService: WpUserInteractionService) { }
+  constructor(private userService: WpUserService, private interactionService: WpUserInteractionService, private websiteService: WebsiteService) { }
 
   ngOnInit(): void {
+    this.websiteService.getAllWebsites().subscribe((websites: Website[]) => {
+        this.websites = websites;
+        for (const website of this.websites) {
+          this.optionList.push(website.title);
+        }
+    });
   }
 
   onAddUser(form: NgForm) {
@@ -24,9 +34,23 @@ export class WpUserCreateComponent implements OnInit {
       return;
     } else {
       let newUser: WpUser;
+      const userWebsites: string[] = [];
+      const websiteTitles: string[] = this.options.value;
+
+      for (const website of this.websites) {
+        for (const websiteTitle of websiteTitles) {
+          if (website.title === websiteTitle) {
+            userWebsites.push(website._id);
+          }
+        }
+      }
+
+      console.log('Website Titles: ' + websiteTitles);
+      console.log('User Websites: ' + userWebsites);
 
       newUser = new WpUser((form.value.wpUserFirstName), (form.value.wpUserLastName),
-        (form.value.wpUserMail), this.websites);
+        (form.value.wpUserMail), userWebsites);
+
       this.userService.createWpUser(newUser).subscribe((response: WpUser) => {
         console.log(response);
         this.interactionService.updateList(response);

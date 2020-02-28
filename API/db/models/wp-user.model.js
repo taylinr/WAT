@@ -20,8 +20,7 @@ const WpUserSchema = new mongoose.Schema({
     },
 
     _websiteID:{
-        type: mongoose.Types.ObjectId,
-        value: [mongoose.Types.ObjectId],
+        type: [mongoose.Types.ObjectId],
         required: false
     },
 

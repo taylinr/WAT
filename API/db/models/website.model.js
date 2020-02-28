@@ -41,6 +41,7 @@ const WebsiteSchema = new mongoose.Schema({
     wpAutoUpdate: {
         type: Boolean,
         required: false,
+        default: false
     },
 
     _serverID:{

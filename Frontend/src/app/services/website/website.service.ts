@@ -24,14 +24,21 @@ export class WebsiteService {
     const wpAutoUpdate = website.wpAutoUpdate;
     const wpVersion = website.wpVersion;
 
-    console.log("Service: " + wpVersion + " " + wpAutoUpdate);
+    console.log('Service: ' + wpVersion + ' ' + wpAutoUpdate);
 
     console.log(_serverID);
-    return this.webReqService.post('websites', {title, _serverID, description, domains, createDate, expirationDate, hostedIntern,  wpVersion, wpAutoUpdate});
+    return this.webReqService.post('websites', {title, _serverID, description, domains, createDate,
+      expirationDate, hostedIntern,  wpVersion, wpAutoUpdate});
   }
 
   getWebsite(serverID: string) {
     const website = this.webReqService.get('servers/' + serverID + '/websites');
+    return website;
+  }
+
+
+  getAllWebsites() {
+    const website = this.webReqService.get('websites');
     return website;
   }
 

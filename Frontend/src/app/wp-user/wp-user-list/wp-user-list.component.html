@@ -3,17 +3,29 @@
   <app-wp-user-create class="row"></app-wp-user-create>
 
   <mat-accordion *ngIf="users.length > 0" multi="true" class="col-12">
-    <mat-expansion-panel *ngFor="let user of users" class="col-6">
+    <div *ngFor="let user of users">
+    <mat-expansion-panel class="col-4">
       <mat-expansion-panel-header class="row">
         <div class="col-12"><h3>{{user.firstName}} {{user.lastName}}</h3></div>
       </mat-expansion-panel-header>
       <div class="col-12 row">
         <div class="col-2" *ngIf="user.mail"><label>E-Mail:</label> <p>{{user.mail}}</p></div>
       </div>
+      <div *ngIf="user._websiteID.length > 0">
+        <label>Websites:</label>
+        <div *ngFor="let website of websites">
+          <div *ngFor="let userWebsiteID of user._websiteID">
+            <div *ngIf="website._id === userWebsiteID">
+              <p>{{website.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-12">
         <button class="delete" mat-button color="warn" (click)="onDelete(user._id)">Delete</button>
       </div>
     </mat-expansion-panel>
+    </div>
   </mat-accordion>
 
   <p class="col-12 row" *ngIf="users.length <= 0">No users added yet!</p>

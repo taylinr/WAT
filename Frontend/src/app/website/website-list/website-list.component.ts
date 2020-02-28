@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import {Website} from '../website.model';
 import {WebsiteService} from '../../services/website/website.service';
 import {WebsiteInteractionService} from '../../services/interaction/website-interaction.service';
+import {WpUserService} from '../../services/wp-user/wp-user.service';
+import {WpUser} from '../../wp-user/wp-user.model';
 
 
 @Component({
@@ -12,9 +14,10 @@ import {WebsiteInteractionService} from '../../services/interaction/website-inte
 export class WebsiteListComponent implements OnInit {
 
   websites: Website[] = [];
+  users: WpUser[] = [];
   @Input() serverID: string;
 
-  constructor(private websiteService: WebsiteService, private websiteInteractionService: WebsiteInteractionService) {}
+  constructor(private websiteService: WebsiteService, private websiteInteractionService: WebsiteInteractionService, private userService: WpUserService) {}
 
   ngOnInit(): void {
     this.websiteService.getWebsite(this.serverID).subscribe((websites: Website[]) => {
@@ -25,6 +28,10 @@ export class WebsiteListComponent implements OnInit {
     this.websiteInteractionService.newWebsite$.subscribe(
       websiteUpdate => { this.websites.push(websiteUpdate); }
     );
+
+    this.userService.getAllWpUser().subscribe((users: WpUser[]) => {
+      this.users = users;
+    });
   }
 
   onDelete(id: string) {

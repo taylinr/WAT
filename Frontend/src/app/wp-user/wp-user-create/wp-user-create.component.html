@@ -95,6 +95,19 @@
             E-Mail must be at least 5 characters long.
           </mat-error>
         </mat-form-field>
+        <div class="col-6">
+          <mat-form-field class="col-12">
+            <mat-label>Websites</mat-label>
+            <mat-select
+              matNativeControl
+              name="websitesWpUser"
+              ngModel
+              multiple
+              [formControl]="options">
+              <mat-option *ngFor="let option of optionList" [value]="option">{{option}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
 
 
 

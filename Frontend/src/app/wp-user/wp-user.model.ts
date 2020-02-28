@@ -10,7 +10,7 @@ export class WpUser {
     this.firstName = firstName;
     this.lastName = lastName;
     this.mail = mail;
-    if (_websiteID.length > 0) {
+    if (_websiteID !== undefined) {
       this._websiteID = _websiteID;
     }
   }
