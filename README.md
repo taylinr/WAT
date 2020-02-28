@@ -2,7 +2,8 @@
 
 Webserver Adminstration Tool
 
-Tool for Adminstrating Webserver with multiple Websites (mostly with Wordpress) to Manage their Servers and Softwares.
+The 'Webserver Administration Tool' helps you to managing all the webservers and (wordpress) websites you run. 
+You can also manage all users of your wordpress backend, and see wich user has access to wich wordpress-backends.
 
 MEAN - Stack Application
 (Created for and at Fraunhofer HHI)
