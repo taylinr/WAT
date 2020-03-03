@@ -20,7 +20,11 @@ export class ServerService {
 
   getServer() {
     const server = this.webReqService.get('servers');
-    // Would like to return a value of Type Website
+    return server;
+  }
+
+  getOneServer(id: string) {
+    const server = this.webReqService.get('servers/' + id);
     return server;
   }
 

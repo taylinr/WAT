@@ -34,10 +34,10 @@ export class ServerListComponent implements OnInit {
         } else {
           for (let i = 0; i < this.servers.length; i++) {
             if (
-              !(this.servers[i].title.includes(updateString)
-              || this.servers[i].description.includes(updateString)
-              || this.servers[i].software.includes(updateString)
-              || this.servers[i].ip.includes(updateString))
+              !(this.servers[i].title.toLowerCase().includes(updateString.toLowerCase())
+              || this.servers[i].description.toLowerCase().includes(updateString.toLowerCase())
+              || this.servers[i].software.toLowerCase().includes(updateString.toLowerCase())
+              || this.servers[i].ip.toLowerCase().includes(updateString.toLowerCase()))
             ) {
               this.servers.splice(i, 1);
             }

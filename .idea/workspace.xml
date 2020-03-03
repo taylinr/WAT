@@ -4,18 +4,14 @@
     <list default="true" id="ac899fe3-173e-481d-bbda-6f734fdcc187" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/db/models/website.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/db/models/website.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/interaction/wp-user-interaction.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/interaction/wp-user-interaction.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/wp-user/wp-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/wp-user/wp-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -31,43 +27,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/search/search.component.html">
+        <entry file="file://$PROJECT_DIR$/API/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="289">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/search/search.component.ts">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/search/search.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -76,12 +48,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="748">
+              <caret line="44" column="3" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="21" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/API/db/mongoose.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/web-request.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server-interaction.service.ts" />
         <option value="$PROJECT_DIR$/API/db/models/index.js" />
@@ -125,25 +158,18 @@
         <option value="$PROJECT_DIR$/Frontend/src/fontawesome/solid.css" />
         <option value="$PROJECT_DIR$/Frontend/src/fontawesome/all.min.css" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.css" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" />
         <option value="$PROJECT_DIR$/Frontend/.gitignore" />
         <option value="$PROJECT_DIR$/Frontend/src/index.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website.model.ts" />
         <option value="$PROJECT_DIR$/API/db/models/server.model.js" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/API/db/models/wp-user.model.js" />
         <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.html" />
         <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.ts" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user.model.ts" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/website/website.service.ts" />
-        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" />
         <option value="$PROJECT_DIR$/API/db/models/website.model.js" />
-        <option value="$PROJECT_DIR$/API/app.js" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/web-request/web-request.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/services/wp-user/wp-user.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html" />
@@ -157,7 +183,16 @@
         <option value="$PROJECT_DIR$/Frontend/src/app/services/search/search.service.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/search/search.component.ts" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" />
         <option value="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" />
+        <option value="$PROJECT_DIR$/API/app.js" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.html" />
+        <option value="$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.ts" />
       </list>
     </option>
   </component>
@@ -226,6 +261,23 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="server-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-administration-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-administration-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,18 +385,18 @@
       <workItem from="1582887690029" duration="15955000" />
       <workItem from="1583140822700" duration="10993000" />
       <workItem from="1583167893752" duration="2909000" />
-      <workItem from="1583226004619" duration="11552000" />
+      <workItem from="1583226004619" duration="20165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269030000" />
+    <option name="totallyTimeSpent" value="277643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -360,7 +412,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.3557047" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.34419942" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159913" side_tool="true" weight="0.32981783" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -422,25 +474,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/server/server.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/interaction/get-server-id.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="13" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -524,20 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -566,40 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="108" column="27" lean-forward="true" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -658,23 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="240" column="28" selection-start-line="240" selection-start-column="28" selection-end-line="240" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/web-request/web-request.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -695,24 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -757,27 +711,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/search/search.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/search/search.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -787,19 +731,122 @@
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/search/search.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-list/wp-user-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="3" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        <state relative-caret-position="231">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="21" selection-end-column="7" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,6 +24,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { WpUserListComponent } from './wp-user/wp-user-list/wp-user-list.component';
 import { WpUserCreateComponent } from './wp-user/wp-user-create/wp-user-create.component';
 import { SearchComponent } from './search/search.component';
+import { ServerEditComponent } from './server/server-edit/server-edit.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SearchComponent } from './search/search.component';
     WpUserListComponent,
     WpUserCreateComponent,
     SearchComponent,
+    ServerEditComponent,
   ],
   imports: [
     FormsModule,

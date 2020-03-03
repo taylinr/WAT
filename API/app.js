@@ -30,7 +30,20 @@ app.get('/servers', (req, res) => {
         return res.send(error.message);
     }
 });
-//Return a list of all Servers
+
+/**
+ * GET /servers/:id
+ * Get one server
+ */
+app.get('/servers/:id', (req, res) => {
+    try {
+        Server.findOne({$and: [{_id: req.params.id}, {deleteFlag: false}]  }).then((servers) => {res.send(servers)});
+    } catch(error){
+        res.status(error.response.status);
+        return res.send(error.message);
+    }
+});
+
 
 /**
  * POST /server

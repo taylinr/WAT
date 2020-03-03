@@ -16,6 +16,7 @@
       <app-website-list [serverID]="server._id"></app-website-list>
       <div class="col-12">
         <button class="delete" mat-button color="warn" (click)="onDelete(server._id)">Delete</button>
+        <app-server-edit [serverID]="server._id"></app-server-edit>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
