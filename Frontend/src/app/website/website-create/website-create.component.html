@@ -109,12 +109,12 @@
         Auto Update
       </mat-checkbox>
 
-      <mat-form-field *ngIf="!checkAutoComplete.checked" class="col-6">
+      <mat-form-field class="col-6">
         <mat-label>WP-Version</mat-label>
-        <input type="text" name="websiteWpVersion" matInput [formControl]="wpVersionsControl" [matAutocomplete]="auto" [disabled]="checkAutoComplete.checked">
+        <input type="text" name="websiteWpVersion" matInput [formControl]="wpVersionsControl" [matAutocomplete]="auto" >
       </mat-form-field>
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let version of wpVersions" [value]="version" [disabled]="checkAutoComplete.checked">{{version}}</mat-option>
+        <mat-option *ngFor="let version of wpVersions" [value]="version" >{{version}}</mat-option>
       </mat-autocomplete>
       <div class="col-6">
         <mat-form-field class="col-12">

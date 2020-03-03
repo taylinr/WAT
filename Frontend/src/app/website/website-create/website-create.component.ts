@@ -21,6 +21,8 @@ export class WebsiteCreateComponent implements OnInit {
   users: WpUser[];
   date = new FormControl(new Date());
 
+
+
   wpVersionsControl = new FormControl();
   wpVersions: string[] = ['5.x', '4.x', '3.x'];
 
@@ -29,6 +31,7 @@ export class WebsiteCreateComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.getServerID.newServerID$.subscribe(
       NewServerID => {
         this.serverID = NewServerID;
@@ -60,16 +63,17 @@ export class WebsiteCreateComponent implements OnInit {
 
       title = form.value.websiteTitle;
       description = form.value.websiteDescription;
-      createDate = form.value.websiteCreateDate;
+      createDate = this.date.value;
       expirationDate = form.value.websiteExpirationDate;
-      hostedIntern = !(form.value.websiteHostedIntern === 'indeterminate');
+      hostedIntern = (form.value.websiteHostedIntern === true);
       if (this.wpVersionsControl.value !== undefined) {
         wpVersion = this.wpVersionsControl.value;
       }
-      wpAutoUpdate = !(form.value.websiteWpAutoUpdate === 'indeterminate');
+      wpAutoUpdate = (form.value.websiteWpAutoUpdate === true);
+      console.log('Version: ' + wpVersion);
+
       domains = [];
 
-      console.log('Wordpress: ' + wpVersion + ' ' + wpAutoUpdate);
 
       const domainsString = form.value.websiteDomains;
       const domainsStringArray = domainsString.split(', ');
@@ -79,16 +83,38 @@ export class WebsiteCreateComponent implements OnInit {
 
       website = new Website(title, this.serverID, description, domains, createDate, expirationDate, hostedIntern, wpVersion,  wpAutoUpdate);
 
-      this.websiteService.createWebsite(website).subscribe((response: Website) => {
-        console.log(response);
-        this.interactionService.updateList(response);
-        if (response) {
+      this.websiteService.createWebsite(website).subscribe((websiteResponse: Website) => {
+        console.log(websiteResponse);
+        if (websiteResponse) {
           form.reset();
           this.showForm = false;
+          for (const username of websiteUserNames) {
+            for (const user of this.users) {
+              if ((user.firstName + ' ' + user.lastName) === username) {
+
+                user._websiteID.push(websiteResponse._id);
+
+                let JSONstring = '{ "_websiteID": [';
+
+                for (const webID of user._websiteID) {
+                  JSONstring += '"' + webID + '",';
+                }
+                JSONstring = JSONstring.substring(0, JSONstring.length - 1);
+                JSONstring +=  '] }';
+
+                console.log('JSON String: ' + JSONstring);
+
+                this.userService.updateWpUser(user._id, JSON.parse(JSONstring)).subscribe((userResponse: any) => {
+
+                    console.log(userResponse);
+
+                });
+              }
+            }
+          }
+          this.interactionService.updateList(websiteResponse);
         }
       });
-
-
     }
   }
 

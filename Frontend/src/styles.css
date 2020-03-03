@@ -3,6 +3,8 @@
 }
 
 
+
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
@@ -104,7 +106,6 @@ h3{
 hr{
   border: none;
   border-top: 1px solid rgba(0,0,0,.12);
-  margin-right: 60px;
 }
 
 
@@ -162,4 +163,25 @@ form .box{
 
 .wp-user-list mat-expansion-panel-header{
   background-color: rgba(255, 64, 129, 0.10);
+}
+
+
+.domains a{
+  display: block;
+  padding: 10px 5px;
+  background-color: rgba(211, 211, 211, 0.2);
+}
+
+
+.searchfield{
+  float: right;
+  padding: 5px 0 0 0;
+}
+
+.searchfield i{
+  font-size: 0.8rem;
+}
+
+header h1{
+  padding: 16px 0 0 0;
 }

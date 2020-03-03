@@ -21,10 +21,10 @@
           <p>{{website.hostedIntern}}</p>
         </div>
         <div class="col-12">
-          <div *ngIf="website.domains.length > 0" class="col-6">
+          <div *ngIf="website.domains.length > 0" class="col-6 domains">
             <label>Domains:</label>
             <div *ngFor="let domain of website.domains last as last">
-              <p>{{domain}}</p>
+              <p><a href="https://www.{{domain}}" target="_blank">{{domain}}</a></p>
               <div *ngIf="website.domains.length > 1 && !last"><hr /></div>
             </div>
           </div>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="col-6">
+          <div class="col-6" *ngIf="website.wpAutoUpdate || website.wpVersion !== undefined && website.wpVersion !== null">
             <label>Version:</label>
             <div *ngIf="website.wpAutoUpdate">
               <p>Auto Update</p>

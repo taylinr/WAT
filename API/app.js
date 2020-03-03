@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS, PATCH");
     next();
 });
 
@@ -229,6 +229,13 @@ app.post('/wp-users', (req, res) => {
  */
 app.patch('/wp-users/:id', (req, res) => {
     try {
+
+        let firstName = req.body.firstName;
+        let lastName = req.body.lastName;
+        let mail = req.body.mail;
+        let _websiteID = req.body._websiteID;
+        let newWpUser = new WpUser({firstName, lastName, mail, _websiteID});
+
         WpUser.findOneAndUpdate({_id: req.params.id},
             { $set: req.body }).then(() => {
             res.sendStatus(200);

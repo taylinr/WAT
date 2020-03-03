@@ -3,6 +3,7 @@ import {Server} from '../server.model';
 import {ServerService} from 'src/app/services/server/server.service';
 import {ServerInteractionService} from '../../services/interaction/server-interaction.service';
 import {GetServerIDService} from '../../services/interaction/get-server-id.service';
+import {SearchService} from '../../services/search/search.service';
 
 @Component({
   selector: 'app-server-list',
@@ -13,7 +14,7 @@ export class ServerListComponent implements OnInit {
 
   servers: Server[] = [];
 
-  constructor(private serverService: ServerService, private interactionService: ServerInteractionService, private getServerID: GetServerIDService) {}
+  constructor(private serverService: ServerService, private interactionService: ServerInteractionService, private getServerID: GetServerIDService, private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.serverService.getServer().subscribe((servers: Server[]) => {
@@ -22,6 +23,27 @@ export class ServerListComponent implements OnInit {
 
     this.interactionService.newServer$.subscribe(
       serverUpdate => { this.servers.push(serverUpdate); }
+    );
+
+    this.searchService.newSearch$.subscribe(
+      updateString => {
+        if (updateString === '') {
+          this.serverService.getServer().subscribe((servers: Server[]) => {
+            this.servers = servers;
+          });
+        } else {
+          for (let i = 0; i < this.servers.length; i++) {
+            if (
+              !(this.servers[i].title.includes(updateString)
+              || this.servers[i].description.includes(updateString)
+              || this.servers[i].software.includes(updateString)
+              || this.servers[i].ip.includes(updateString))
+            ) {
+              this.servers.splice(i, 1);
+            }
+          }
+        }
+      }
     );
   }
 

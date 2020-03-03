@@ -23,6 +23,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { WpUserListComponent } from './wp-user/wp-user-list/wp-user-list.component';
 import { WpUserCreateComponent } from './wp-user/wp-user-create/wp-user-create.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { WpUserCreateComponent } from './wp-user/wp-user-create/wp-user-create.c
     WebsiteCreateComponent,
     WpUserListComponent,
     WpUserCreateComponent,
+    SearchComponent,
   ],
   imports: [
     FormsModule,

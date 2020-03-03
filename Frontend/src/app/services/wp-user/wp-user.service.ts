@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {WebRequestService} from '../web-request/web-request.service';
 import {WpUser} from '../../wp-user/wp-user.model';
+import {JsonObject} from '@angular/compiler-cli/ngcc/src/packages/entry_point';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class WpUserService {
     return this.webReqService.delete('wp-users/' + wpUserID );
   }
 
-  updateWpUser(wpUserID: string, user: WpUser) {
-    return this.webReqService.patch('wp-users/' + wpUserID, {user} );
+  updateWpUser(wpUserID: string, user: JsonObject) {
+    return this.webReqService.patch('wp-users/' + wpUserID, user );
   }
 }
