@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac899fe3-173e-481d-bbda-6f734fdcc187" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/server/server-list/server-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/server/server.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/website/website-list/website-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/wp-user/wp-user-create/wp-user-create.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -56,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-edit/server-edit.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -64,6 +55,16 @@
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -387,16 +388,17 @@
       <workItem from="1583167893752" duration="2909000" />
       <workItem from="1583226004619" duration="20165000" />
       <workItem from="1583254940554" duration="51000" />
+      <workItem from="1583315096575" duration="499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277694000" />
+    <option name="totallyTimeSpent" value="278193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -474,9 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Frontend/src/app/website/website-create/website-create.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/src/app/server/server-create/server-create.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -848,6 +847,14 @@
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
